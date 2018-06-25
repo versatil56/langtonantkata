@@ -4,9 +4,11 @@ import org.scalatest._
 
 class LantonsAntSpec extends FlatSpec with Matchers {
 
-  //What's the simplest test possible we can do?
-  "First test here" should
-    "write my first test here" in {
-      Hello.greeting shouldEqual "hello"
+  "An ant" should {
+    "be defined in the application" in {
+      val ant = new Ant()
+      ant.isInstanceOf[Ant] shouldBe true
     }
+  }
+
 }
